@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover minimum-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+
+
+    <title>Lesson 2.1 - Illusion of Objectivity | Indian School of Business (ISB Online)</title>
+    
+    <!-- Font for navigator text -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Source+Code+Pro|Source+Sans+Pro:400,400i,700&display=swap">
+
+<link rel="stylesheet" href="https://assets.interaction-design.org/css/app.css?id=687c7d4bf520b60afbc651d01de24e2f">
+
+<link rel="stylesheet" href="https://assets.interaction-design.org/css/pages/course.css?id=791c6402f671bf62156cec34c6e6a67b">    <link rel="stylesheet" href="https://assets.interaction-design.org/css/pages/uxArticle.css?id=22e0de032f3f76d4044272af9a7de81d">
+<link rel="image_src" href="https://assets.interaction-design.org/img/app/website-thumbnail-image.jpg?id=f765e0695d22ec022bc56bdf0e909364"/>
+<meta property="fb:app_id" content="142481353231314"/>
+<meta property="fb:page_id" content="19975077227"/>
+<link rel="alternate" type="application/rss+xml" title="Interaction Design Foundation - UX Feed" href="#" />
+<link rel="canonical" href="#"/>
+<meta name="description" content="Learn User Experience (UX) and Design from experts"/>
+
+
+<meta property="og:site_name" content="The Interaction Design Foundation"/>
+<meta property="og:title" content="Lesson 1.5 - Information Visualization"/>
+<meta property="og:description" content="Learn User Experience (UX) and Design from experts"/>
+<meta property="og:image" content="#"/>
+<meta property="og:url" content="#" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@interacting" />
+<meta name="twitter:creator" content="@interacting" />
+
+    <script>
+    window.csrfToken = "k3wKDanJTYtxXq0fODpiUdVgwwoJgfO3lzClFjDi";
+    window.termsOfUseRevision = "20211208";
+    window.privacyContentRevision = "20180520";
+    window.currentUser = {"id":34435,"email":"pg@fju.us","name":"Praveen Garimella","slug":"praveen-garimella","membership_type":"professional_membership_type"};
+    window.currentUser.isGuest = function() {return false;};
+</script>
+    
+    <script src="https://d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js" async onload="setupBugsnag()"></script>
+    <script>
+        function setupBugsnag() {
+            window.bugsnagClient = Bugsnag.start({
+                apiKey: '4fc40517cdca4f44ae67a2e4fbe64d04',
+                appVersion: '4.368.1',
+                appType: 'browser',
+                user: {
+                    id: window.currentUser.id,
+                    name: window.currentUser.name,
+                    email: window.currentUser.email
+                },
+                onError: function (event) {
+                    
+                    if (window.location.protocol.indexOf('file') > -1) {
+                        return false;
+                    }
+
+                    
+                    var error = event.errors[0];
+                    for (var frame in error.stacktrace) {
+                        var file = frame.file || error.stacktrace[frame].file;
+                        if (file && file.indexOf('moz-extension://') > -1) {
+                            return false;
+                        }
+                    }
+
+                    
+                    var messageToIgnore = [
+                        "Expected token ')'",
+                        "heap.push is not a function",
+                    ]
+                    if (error && messageToIgnore.some(message => error.errorMessage.includes(message))) {
+                        return false;
+                    }
+                }
+            });
+        }
+    </script>
+    <style type="text/css">
+        .centeredSmallContainer1{margin-left:auto;margin-right:auto;max-width:
+            940px;float: right;padding-right: 100px;}
+
+        .lessonItem__wrapper1{display: flex; margin: 24px 16px;}
+    </style>
+    </head>
+<body class="js-layout--default"
+>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJ8XGB');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJ8XGB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+                <script>
+(function () {
+    function insertSprite(spriteText) {
+        document.body.insertAdjacentHTML('afterbegin', `<div class="hidden">${spriteText}</div>`);
+    }
+
+    const currentSpriteUrl = "#";
+    let savedSpriteUrl;
+    
+    try {
+        savedSpriteUrl = localStorage.getItem('spriteUrl');
+    } catch(error) {
+        savedSpriteUrl = null;
+    }
+
+    if (savedSpriteUrl === currentSpriteUrl) {
+        insertSprite(localStorage.getItem('spriteContent'));
+    } else {
+        fetch(currentSpriteUrl).then((response) => {
+            if (!response || !response.ok) return;
+
+            response.text().then((text) => {
+                insertSprite(text);
+                try {
+                    localStorage.setItem('spriteUrl', currentSpriteUrl);
+                    localStorage.setItem('spriteContent', text);
+                } catch(detail) {
+                    window.dispatchEvent(new CustomEvent('log:warning', {detail}));
+                }
+
+            });
+        });
+    }
+}());
+</script>
+
+
+<div class="pageContainer">
+
+    <header data-secondary-navigation-header class="navigationHeader__secondaryNavigationBar  sm:hide hide-print">
+    <div class="gridContainer">
+        <div class="gridContent">
+            <ul class="inlineList navigationHeader__linksList" aria-label="Accessory navigation">
+                
+
+    
+
+<li class="inlineList__item inlineList__item--right"><a tabindex="-1" href="#">Frequently asked questions</a></li>
+<li class="inlineList__item"><a tabindex="-1" href="#">Contact</a></li>
+    
+            </ul>
+        </div>
+    </div>
+</header>
+
+<nav class="navigationHeader js-navigationHeader sm:hide" aria-label="Main Navigation">
+    <div class="navigationHeader__primaryNavigationBar gridContainer">
+        <div class="gridContent">
+            <div class="primaryNavigationBar">
+                <a class="primaryNavigationBar__logo" href="#" title="Interaction Design Foundation logo" aria-label="Home">
+                    <picture>
+                        <source media="(min-width: 768px) and (max-width: 1055px)" srcset="#">
+                        <img width="200" height="65" class="navigationHeaderLogo__image" src="isb.png" alt="Interaction Design Foundation"/>
+                    </picture>
+                </a>
+
+                <div class="primaryNavigationBar__navigation">
+                    <ul class="inlineList text-sans-serif">
+                        <li class="navigationHeader__listItem">
+            <a 
+           class="navigationHeader__link link--noUnderline link--animated"
+           href="#"
+           >Learning Tracks
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a 
+           class="navigationHeader__link link--noUnderline link--animated"
+           href="#"
+           >Current Courses
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a 
+           class="navigationHeader__link link--noUnderline link--animated"
+           href="#"
+           >Past Courses
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a 
+           class="navigationHeader__link link--noUnderline link--animated"
+           href="#"
+           >Start A New Course
+        </a>
+    </li>
+
+                    </ul>
+                </div>
+
+                <div class="primaryNavigationBar__accountDetails">
+                    <div class="accountDetails
+    
+    accountDetails--right
+    
+    "
+>
+    <div class="accountDetails__inner">
+                    <div class="accountDetails__image">
+     <a href="#" aria-hidden="true">         <img
+            src="https://public-media.interaction-design.org/images/members/34435/profile_pic/original.e3c7c0e51af980ce3157c3b1513a7eac.jpg?tr=w-112,h-112"
+            class="image--round"
+            alt="Praveen Garimella"
+        />
+     </a> </div>
+
+<div class="accountDetails__info">
+            <a class="accountDetails__name" href="#"
+           aria-hidden="true"
+           title="Your profile page">
+            Praveen Garimella
+        </a>
+    
+    <ul class="text-sans-serif accountDetails__links inlineList inlineList--withSeparator">
+        <li><a class="link link--small" href="#" title="Your profile page" aria-label="Your profile page">Profile</a></li>
+        <li>
+            <!-- <form method="POST" class="form" action="#"> -->
+                <!-- <button type="submit" class="link link--small">
+                    Log out
+                </button> -->
+            <!-- </form> -->
+            <a class="link link--small" href="#" title="Your profile page" aria-label="Your profile page">Log out</a>
+        </li>
+    </ul>
+</div>
+            </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="pageAnnouncements sm:hide">
+        
+        
+        <div
+    data-page-announcement
+    data-importance="8"
+     data-dismissible-id="outdatedBrowser"     class="gridContainer pageAnnouncement UITypeStyle pageAnnouncement--vital hidden-on-supported-browsers"
+>
+    <div class="gridContent">
+        <div class="pageAnnouncement__message text-neutral-01 flex justify-center text-left font-bold" role="status">
+            <div class="sm:hide">
+        Please <a href="http://outdatedbrowser.com/en" target="_blank" rel="noopener noreferrer nofollow">upgrade your browser</a>
+        as it’s outdated. You’ll reduce security risks and help make the internet better.
+    </div>
+    <div class="sm:show">
+        Your browser is outdated—<a href="http://outdatedbrowser.com/en" target="_blank" rel="noopener noreferrer nofollow">upgrade it now</a>.
+    </div>
+                            <button type="button" class="pageAnnouncement__button flex-shrink-0 ml-small" data-page-announcement-close-button aria-label="Hide message">
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon pageAnnouncementButton__icon" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                </button>
+                    </div>
+    </div>
+</div>
+    </header>
+</nav>
+<div class="mobileHeader js-mobileHeader">
+
+    <div class="mobileHeaderMainNav">
+        <button class="btn-offcanvas js-openOffCanvas">
+            <span class="js-openSmallScreenMenu">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=32 height=32
+    class="svg-icon align-middle"
+>
+    <use xlink:href="#hamburger"></use>
+</svg>
+                <span class="visually-hidden">Open menu</span>
+            </span>
+            <span class="js-closeSmallScreenMenu hidden">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=32 height=32
+    class="svg-icon align-middle"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                <span class="visually-hidden">Close menu</span>
+            </span>
+        </button>
+
+        <div class="mobileHeaderMainNav__logo">
+            <a href="#" title="Interaction Design Foundation"
+               tabindex="-1">
+                    <img src="isb.png"
+                        width="128"
+                        height="42" />
+            </a>
+        </div>
+        <div class="mobileHeaderMainNav__userMenu">
+                            <input type="checkbox" name="profileMenuToggle" id="profileMenuToggle" class="visually-hidden">
+                <label for="profileMenuToggle" class="userMenu__toggle">
+                    <img src="#"
+                        alt="Profile image for Praveen Garimella"
+                        class="image--round"
+                        width="50"
+                        height="50" />
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=16 height=16
+    class="svg-icon userMenuCaret align-middle"
+>
+    <use xlink:href="#caret-down"></use>
+</svg>
+                </label>
+                <ul class="mobileHeaderMainNav__memberMenu text-sans-serif">
+                    <li class="mobileHeaderMainNav__memberMenuItem">
+                        <a class="mobileHeaderMainNav__memberMenuItemLinks" href="#">Profile</a>
+                    </li>
+                    <li class="mobileHeaderMainNav__memberMenuItem">
+                        <!-- <form method="POST" class="form" action="#"> -->
+                           <!--  <button type="submit" class="mobileHeaderMainNav__memberMenuItemLinks">
+                                Log out
+                            </button> -->
+                        <!-- </form> -->
+                        <a class="mobileHeaderMainNav__memberMenuItemLinks" href="#">Log out</a>
+                    </li>
+                </ul>
+                    </div>
+
+    </div>
+
+    <div class="pageAnnouncements--mobileHeader" data-page-announcements-mobile>
+            </div>
+</div>
+
+<div class="offCanvasWrapper">
+    <nav class="offCanvasMenu" aria-label="Main Navigation for small screens">
+        <ul class="offCanvasMenu__list text-sans-serif">
+            <li class="navigationHeader__listItem">
+            <a tabindex="-1"
+           class="navigationHeader__link "
+           href="#"
+           >Learning Tracks
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a tabindex="-1"
+           class="navigationHeader__link "
+           href="#"
+           >Current Courses
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a tabindex="-1"
+           class="navigationHeader__link "
+           href="#"
+           >Past Courses
+        </a>
+    </li>
+<li class="navigationHeader__listItem">
+            <a tabindex="-1"
+           class="navigationHeader__link "
+           href="#"
+           >Start A New Course
+        </a>
+    </li>
+<
+        </ul>
+
+        
+        <ul class="offCanvasMenu__list offCanvasMenu__list--links text-sans-serif">
+            <li class="inlineList__item">
+        <a tabindex="-1" href="#">
+            Want a new job in UX?
+        </a>
+    </li>
+
+    <li class="inlineList__item"><a tabindex="-1" href="#">Get free months: refer your friends</a></li>
+<li class="inlineList__item"><a tabindex="-1" href="#">For companies</a></li>
+
+<li class="inlineList__item inlineList__item--right"><a tabindex="-1" href="#">Frequently asked questions</a></li>
+<li class="inlineList__item"><a tabindex="-1" href="#">Contact</a></li>
+    
+        </ul>
+
+        <div class="socialLinks justify-between flex-no-wrap">
+            <a href="#"
+               target="_blank" rel="noopener" tabindex="-1" aria-label="Facebook page">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon fill-neutral-01" width="44" height="44"
+>
+    <use xlink:href="#brand-facebook"></use>
+</svg>
+            </a>
+            <a href="#"
+               target="_blank" rel="noopener" tabindex="-1" aria-label="Instagram page">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon fill-neutral-01" width="44" height="44"
+>
+    <use xlink:href="#brand-instagram"></use>
+</svg>
+            </a>
+            <a href="#"
+               target="_blank" rel="noopener" tabindex="-1" aria-label="Twitter page">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon fill-neutral-01" width="44" height="44"
+>
+    <use xlink:href="#brand-twitter"></use>
+</svg>
+            </a>
+            <a href="#"
+               target="_blank" rel="noopener" tabindex="-1" aria-label="Linkedin page">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon fill-neutral-01" width="44" height="44"
+>
+    <use xlink:href="#brand-linkedin"></use>
+</svg>
+            </a>
+            <a href="#"
+               target="_blank" rel="noopener" tabindex="-1" aria-label="Pinterest page">
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon fill-neutral-01" width="44" height="44"
+>
+    <use xlink:href="#brand-pinterest"></use>
+</svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+    <main class="content-wrapper">
+            
+            <div>
+            <input type="hidden" id="courseId" value="34"/>
+            <input type="hidden" id="lessonId" value="1385"/>
+            <input type="hidden" id="lessonItemId" value="12696"/>
+            <input type="hidden" id="scheduleId" value="2291"/>
+
+                            <div class="gridContainer ranksProgressContainer ranksProgressContainer--compact">
+    <div class="gridContent">
+        <div class="ranksProgressWrapper js-ranksProgressWrapper--sticky
+        ">
+
+            <div class="ranksProgress ranksProgress--compact">
+                <div class="container">
+                    
+                                            <div class="ranksProgress__content ranksProgress__content--inProgress">
+
+                            <section class="sm:hide ranks-section">
+                                <div class="rankMovement text-sans-serif text-center mr-medium">
+    <div>Your ranking</div>
+
+    <ul class="list-none pl-none mb-none flex" id="rankValues">
+        <li class="textItem">
+            <span class="hectoTypeFont mt-none mb-tiny" id="countryRankValue">
+                #577
+            </span>
+            <span class="milliTypeFont m-none text-color-secondary">Hyderabad</span>
+        </li>
+        <li class="textItem">
+            <span class="hectoTypeFont m-none mb-tiny" id="continentRankValue">
+                #970
+            </span>
+            <span class="milliTypeFont m-none text-color-secondary">Telangana</span>
+        </li>
+        <li class="textItem">
+            <span class="hectoTypeFont m-none mb-tiny" id="worldWideRankValue">
+                #3887
+            </span>
+            <span class="milliTypeFont m-none text-color-secondary">India</span>
+        </li>
+    </ul>
+</div>
+                            </section>
+
+                            <a class="primaryNavigationBar__logo primaryNavigationBar__logo--ranksProgress" href="#"
+                                title="Interaction Design Foundation logo">
+                                <picture>
+                                    <source media="(min-width: 768px) and (max-width: 1055px)" srcset="#">
+                                    <img width="200" height="65" class="navigationHeaderLogo__image" src="isb.png"
+                                        alt="Interaction Design Foundation logo" />
+                                </picture>
+                            </a>
+
+                            <section class="ranksProgress__achievement">
+                                <div class="achievementProgress">
+    <input type="hidden" name="scorePercentage" value="25">
+
+    <div class="achievementProgress__progressContainer">
+        <div class="achievementProgress__scoreTextContainer mt-small" aria-label="Your course score is 79 out of 325 possible points. That is a 25 percentile.">
+            <div class="achievementProgress__scoreAchievedText">
+                <div class="achievementProgress__announcingScoreSummary">
+                    Your score: 79 / 325 points (25%)
+                </div>
+                <div class="achievementProgress__scoreSummary">
+                    <span class="sm:hide">Your score:</span>
+                    <span class="sm:show">Score:</span>
+                    <span class="js-absoluteScore">79</span> / <span class="js-fullScore">325 points</span> (<span class="js-scorePercentage">25</span>%)
+                </div>
+            </div>
+            <div class="achievementProgress__addScore"></div>
+        </div>
+        <div
+            data-encouragement-tooltip
+                            data-tip
+                data-title="Great work so far, Praveen!"
+                        class="achievementProgress__progressBarWithMarks tip-bottom tip-left"
+        >
+            <div class="achievementProgressbar">
+    <div
+        class="achievementProgressbar__part achievementProgressbar__part--achieved"
+        role="progressbar"
+        style="width: 24.307692307692%;"
+        aria-valuenow="79"
+        aria-valuemin="0"
+        aria-valuemax="325"
+    ></div>
+    <div
+        class="achievementProgressbar__part achievementProgressbar__part--potential"
+        role="progressbar"
+        style="width: 0%;"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="325"
+    ></div>
+    <div class="achievementProgressbar__part achievementProgressBar__animationBar--achieved js-achievementProgressBar__animationBar--achieved"></div>
+</div>
+
+
+<div class="achievementProgress__mark achievementProgress__mark--70" data-mark="70">
+    <div
+        aria-label="When am I eligible for a Course Certificate?"
+        data-title="Score 70% of total points to earn your Course Certificate. Aim for a higher score to earn distinctions!"
+        class="achievementProgress__marker  tip-bottom"
+        data-tip
+       ></div>
+</div>
+<div class="achievementProgress__mark achievementProgress__mark--90" data-mark="90">
+    <div
+        class="achievementProgress__marker  tip-bottom"
+        data-tip="true"
+        data-title="Score 90% of total points to earn a “Top 10% Course Taker” distinction! Your distinction will be shown on your Certificate and profile."
+        aria-label="How can I earn the &#34;Top 10% Course-taker&#34; course distinction?"
+        aria-haspopup="true"
+    >
+    </div>
+</div>
+
+        </div>
+        <div class="achievementProgress__potentialScoreLegend ">
+    <div
+        class="achievementProgress__meterLine achievementProgress__meterLine--potential achievementProgress__meterLine--potentialExample">
+    </div>
+    <div data-potential-points="0" class="achievementProgress__announcingPotentialPointSummary centiTypeFont mb-none mt-none ml-tiny text-color-secondary align-vertical-center">
+        <span>
+            <span class="achievementProgress__potentialPoints">0</span>
+            potential points
+        </span>
+    </div>
+    <div class="centiTypeFont mb-none mt-none ml-tiny text-color-secondary tip-bottom align-vertical-center"
+        data-title="While waiting for your open-ended answers to be graded, you’re awarded potential points."
+        data-tip="true">
+        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="13" height="13"
+>
+    <use xlink:href="#info"></use>
+</svg>
+    </div>
+</div>
+    </div>
+    <div
+        class="achievementProgress__target tip-bottom"
+        data-tip
+        data-title="Score 100% of total points to earn a “Best in Class” distinction! Your distinction will be shown on your Certificate and profile."
+        aria-label="Learn more about the &#34;Best in Class&#34; distinction"
+    >
+        <picture>
+            <img src="https://sbtet.isb.edu/static/media/CEE-Certificate-BL.fdfa9ddeb5534acd7e17.png" alt="Certificate">
+        </picture>
+    </div>
+</div>
+
+                                                                    <div class="flex-shrink-0 align-vertical-center sm:hide">
+                                        <button type="button"
+                                            class="button button--secondary button--small ml-small js-generateCertificateButton hidden"
+                                            data-dialog="course-certificate-dialog"
+                                        >
+                                            <span class="md:hide">Generate</span>
+                                            <span class="md:show">Get</span>
+                                            certificate
+                                        </button>
+                                    </div>
+
+                                    <div class="ranksProgress__generateCertificate--small sm:show">
+                                        <button type="button"
+                                            class="link js-generateCertificateButton hidden"
+                                            data-dialog="course-certificate-dialog"
+                                        >
+                                            Generate certificate
+                                        </button>
+                                    </div>
+
+                                                            </section>
+                        </div>
+                                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            
+            <div class="lessonItem__wrapper1 js-lessonItemWrapper">
+
+                
+                <aside class="lessonItem__sidebar hide-print js-lessonItemSidebar">
+                    <h3 class="mt-none mb-none">Lesson Navigator</h3>
+
+                    <button
+                        class="link link--noUnderline lessonItem__toggleButton"
+                        id="buttonToggleLessonNavigator"
+                    >
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon align-middle"
+>
+    <use xlink:href="#chevron-double-left"></use>
+</svg>
+                        <span class="align-middle js-lessonNavigator__buttonToggleText">Hide</span>
+                    </button>
+
+                    <nav class="lessonNavigator js-lessonNavigator" aria-label="Lesson Navigator">
+    <ul class="lessonNavigator__list">
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem "
+                data-lesson-id="1384"
+                data-progress="100"
+                data-start-date="2018-04-22 00:01:02">
+
+                <div class="lessonItem__connector hidden"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson (completed)" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started hidden"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom "
+                        type="button" aria-expanded="false" aria-controls="subLessonList0"
+                        data-tip data-title="Estimated time to complete 1&nbsp;hour&nbsp;31&nbsp;mins"
+                    >
+                        Unit 1. Welcome and Introduction
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList0" class="lessonNavigator__subLessonList hidden">
+    <li class="lessonNavigator__sublessonItem "
+                            data-progress="100"
+                            data-lesson-item-id="13798">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item (completed)" aria-hidden="true">
+    <svg
+version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started hidden"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+        </div>
+<span class="tip-bottom" data-tip data-title="Estimated time to complete: 37&nbsp;mins">
+<a href="#"
+class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                            >
+1.1. About Critical Thinking
+                    </a>
+            </span>
+        </li>
+
+
+<li class="lessonNavigator__sublessonItem js-optional"
+    data-progress="0"                      data-lesson-item-id="12685">
+    <div class="progressRingWrapper" data-tip data-title="Optional lesson item (completed)" aria-hidden="true">
+    <!-- <span class="js-menu-not-started"> -->
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+        </span>
+    </div>
+    <span class="tip-bottom" data-tip data-title="Estimated time to complete: 1&nbsp;min">
+    <a href="#"
+    class="link--noUnderline lessonNavigator__sublessonTitle"
+    >
+    1.2. Instructor
+    </a>
+    </span>
+    </li>
+        <li class="lessonNavigator__sublessonItem "
+                            data-progress="100"
+                            data-lesson-item-id="12689">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item (completed)" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started hidden"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+<span class="tip-bottom" data-tip data-title="Estimated time to complete: 16&nbsp;mins">
+<a href="#"
+    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                    >
+    1.3. How to earn your certificate?
+        </a>
+        </span>
+        </li>
+    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12686">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item (completed)" aria-hidden="true">
+    <span class="js-menu-not-started">
+      <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 5&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    1.4. How to get help from the community?
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12687">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item (completed)" aria-hidden="true">
+                                                                    <span class="js-menu-not-started">
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 1&nbsp;min">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    1.5. Meet your classmates
+                                </a>
+                            </span>
+                        </li>
+                                                                    
+                                                                    
+                                                                    
+                                    </ul>
+            </li>
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem lessonNavigatorList__lessonItem--expanded"
+                data-lesson-id="1385"
+                data-progress="100"
+                data-start-date="2018-04-22 00:01:02">
+
+                <div class="lessonItem__connector hidden"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom font-bold"
+                        type="button" aria-expanded="false" aria-controls="subLessonList1"
+                        data-tip data-title="Estimated time to complete 4&nbsp;hours&nbsp;9&nbsp;mins"
+                    >
+                        Unit 2. Frames and Schemas
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList1" class="lessonNavigator__subLessonList ">
+                                                                   
+        <li class="lessonNavigator__sublessonItem lessonNavigator__sublessonItem--active"
+                            data-progress="100"
+                            data-lesson-item-id="12696">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started progressRing--current"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 20&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                     aria-current="page"                                 >
+                                    2.1. The Illusion of Objectivity
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="100"
+                            data-lesson-item-id="12693">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 17&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    2.2. Frames
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="100"
+                            data-lesson-item-id="12694">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started "
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+<span class="tip-bottom" data-tip data-title="Estimated time to complete: 14&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    2.3. Schemas
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="100"
+                            data-lesson-item-id="12695">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 50&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    2.4. Unit Test
+                                </a>
+                            </span>
+                        </li>                                  
+                                                                    
+                                    </ul>
+            </li>
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem "
+                data-lesson-id="1386"
+                data-progress="0"
+                data-start-date="2018-05-09 00:00:00">
+
+                <div class="lessonItem__connector"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom "
+                        type="button" aria-expanded="false" aria-controls="subLessonList2"
+                        data-tip data-title="Estimated time to complete 2&nbsp;hours&nbsp;46&nbsp;mins"
+                    >
+                        Unit 3. Heuristics
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList2" class="lessonNavigator__subLessonList hidden">
+                                                                    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12705">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item" aria-hidden="true">
+                                                                    <span class="js-menu-not-started">
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--optional js-progress-ring fill-neutral-04"
+>
+    <use xlink:href="#circle-dotted"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 3&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    3.1. Anchoring and Adjustment
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12706">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 20&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    3.2. Availability
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12707">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 21&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    3.3. Representativeness
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12708">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 20&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    3.4. Unit Test
+                                </a>
+                            </span>
+                        </li>
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                    </ul>
+            </li>
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem "
+                data-lesson-id="1387"
+                data-progress="0"
+                data-start-date="2018-05-16 00:00:00">
+
+                <div class="lessonItem__connector hidden"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom "
+                        type="button" aria-expanded="false" aria-controls="subLessonList3"
+                        data-tip data-title="Estimated time to complete 2&nbsp;hours&nbsp;33&nbsp;mins"
+                    >
+                        Unit 4. Biases
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList3" class="lessonNavigator__subLessonList hidden">
+                                                                    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12714">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item" aria-hidden="true">
+                                                                    <span class="js-menu-not-started">
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--optional js-progress-ring fill-neutral-04"
+>
+    <use xlink:href="#circle-dotted"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 2&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    4.1. Fundamental Attribution Error
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12715">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 17&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    4.2. Confirmation Biases
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12716">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 16&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    4.3. Debiasing
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12717">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 17&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    4.4. Unit Test
+                                </a>
+                            </span>
+                        </li>
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                    </ul>
+            </li>
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem "
+                data-lesson-id="1388"
+                data-progress="0"
+                data-start-date="2018-05-23 00:00:00">
+
+                <div class="lessonItem__connector hidden"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom "
+                        type="button" aria-expanded="false" aria-controls="subLessonList4"
+                        data-tip data-title="Estimated time to complete 4&nbsp;hours&nbsp;37&nbsp;mins"
+                    >
+                        Unit 5. Group Decision Making
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList4" class="lessonNavigator__subLessonList hidden">
+                                                                    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12722">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item" aria-hidden="true">
+                                                                    <span class="js-menu-not-started">
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--optional js-progress-ring fill-neutral-04"
+>
+    <use xlink:href="#circle-dotted"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 3&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    5.1. The Common Information Effect
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12723">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 22&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    5.2. Conformity
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12724">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 19&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    5.3. Unit Test
+                                </a>
+                            </span>
+                        </li>
+                          </ul>
+            </li>
+                                <li class="lessonNavigatorList__lessonItem js-lessonNavigatorList__lessonItem "
+                data-lesson-id="1389"
+                data-progress="0"
+                data-start-date="2018-05-30 00:00:00">
+
+                <div class="lessonItem__connector hidden"></div>
+                <div class="lessonNavigator__lessonWrapper">
+                    <div class="progressRingWrapper" data-tip data-title="Mandatory lesson" aria-hidden="true">
+                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--notCompleted fill-neutral-04 js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                            </div>
+
+                    <button class="lessonNavigator__lessonTitle js-lessonNavigator__lessonTitle tip-bottom "
+                        type="button" aria-expanded="false" aria-controls="subLessonList5"
+                        data-tip data-title="Estimated time to complete 3&nbsp;hours&nbsp;3&nbsp;mins"
+                    >
+                        Unit 6. Course Wrapup
+                    </button>
+
+                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon flex-shrink-0 lessonNavigator__chevronIcon js-lessonNavigator__chevronIcon"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+                </div>
+
+                <ul id="subLessonList5" class="lessonNavigator__subLessonList hidden">
+                                                                    <li class="lessonNavigator__sublessonItem js-optional"
+                            data-progress="0"
+                            data-lesson-item-id="12734">
+                            <div class="progressRingWrapper" data-tip data-title="Optional lesson item" aria-hidden="true">
+                                                                    <span class="js-menu-not-started">
+                                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--optional js-progress-ring fill-neutral-04"
+>
+    <use xlink:href="#circle-dotted"></use>
+</svg>
+                                    </span>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 3&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    6.1. Key Takeaways
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12736">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 22&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    6.2. Final Exam
+                                </a>
+                            </span>
+                        </li>
+                                                                    <li class="lessonNavigator__sublessonItem "
+                            data-progress="0"
+                            data-lesson-item-id="12737">
+                            <div class="progressRingWrapper" data-tip data-title="Mandatory lesson item" aria-hidden="true">
+                                                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--notCompleted js-menu-not-started"
+>
+    <use xlink:href="#circle"></use>
+</svg>
+                                    <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon progressRing progressRing--completed fill-accent-01 text-color-secondary js-menu-completed hidden"
+>
+    <use xlink:href="#circle-tick"></use>
+</svg>
+                                                            </div>
+                            <span class="tip-bottom" data-tip data-title="Estimated time to complete: 22&nbsp;mins">
+                                <a href="#"
+                                    class="link--noUnderline lessonNavigator__sublessonTitle"
+                                                                    >
+                                    6.3. Conclusion
+                                </a>
+                            </span>
+                        </li>
+                                                                    
+                                    </ul>
+            </li>
+            
+
+            </ul>
+</nav>
+
+                </aside>
+
+                
+                <section class="lessonItem__content">
+
+
+                    <div class="centeredSmallContainer1">
+               
+               <br><br>
+                <iframe src="https://slides.com/shaikirfanashereen/minimal/embed" width="820" height="480" title="Minimal" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                <!-- <iframe src="https://slides.com/shaikirfanashereen/minimal/embed" width="920" height="420" title="Minimal" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+
+                <!-- previous and next section -->
+                <div class="lessonPager pt-medium-large flex justify-between js-lessonPagination">
+        <a
+        class="button button--ghost lessonPager__button mr-medium"
+        disabled="1"
+        href="#"
+    >
+        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon align-middle"
+>
+    <use xlink:href="#chevron-left-bold"></use>
+</svg>
+        <span class="align-middle">Previous<span class="sm:hide">&nbsp;Lesson</span></span>
+    </a>
+            <a
+        class="button button--ghost lessonPager__button js-buttonNextLesson"
+        disabled="1"
+        href="#"    >
+        <span class="align-middle">Next<span class="sm:hide">&nbsp;Lesson</span></span>
+        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon align-middle"
+>
+    <use xlink:href="#chevron-right-bold"></use>
+</svg>
+    </a>
+    </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        
+        <section class="floatingHelpToolbar sm:hide js-floatingHelpToolbar  floatingHelpToolbar--interactable ">
+    <button class="floatingHelpToolbar__trigger js-floatingHelpToolbar__trigger">
+        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon"
+>
+    <use xlink:href="#info"></use>
+</svg>
+        <span class="floatingHelpToolbar__name font-bold text-sans-serif">
+            FAQs / Report error
+        </span>
+    </button>
+    <div class="floatingHelpToolbar__body js-floatingHelpToolbar__body">
+        <ul class="linkStrip floatingHelpToolbar__items">
+            <li class="linkStrip__item linkStrip__item--link">
+              <!-- data-dialog="course-faq" -->
+    <button type="button" class="linkStrip__link text-left" >    
+            Frequently Asked Questions
+            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon fill-brand-02"
+>
+    <use xlink:href="#chevron-right-bold"></use>
+</svg>
+        </button>
+</li>
+
+            <li class="linkStrip__item linkStrip__item--link">
+    <!-- data-dialog="reportErrorDialog" -->
+    <button
+                class="linkStrip__link"
+                
+            >
+                Report an error
+                <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width=20 height=20
+    class="svg-icon fill-brand-02"
+>
+    <use xlink:href="#chevron-right-bold"></use>
+</svg>
+            </button>
+</li>
+        </ul>
+    </div>
+</section>
+
+        </main>
+
+    <footer class="footer hide-print">
+
+    <h2 class="visually-hidden">Footer navigation</h2>
+
+    
+    <div class="footer__links gridContainer">
+    <div class="gridContent">
+        <ul class="inlineList footerLinks__list text-small">
+            <li class="footerLinks__listItem"><a href="#">Terms of Use / Privacy</a></li>
+            <li class="footerLinks__listItem"><a href="#">About Us</a></li>
+                    </ul>
+    </div>
+</div>
+</footer>
+
+
+
+</div>
+
+    
+
+
+<dialog data-cancelable="true" id="course-certificate-dialog">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">You’ll need to score 70% and above to get your Course Certificate</h2>
+                
+                                    <div class="modal__body"><p>
+        Continue learning and answering questions to hit 70% score!
+    </p></div>
+                
+                                    <div class="modal__footer"><button class="button button--primary">
+            Got it, I’ll continue learning
+        </button></div>
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="answerSubmitConfirmationModal">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">Confirm Answer Submission</h2>
+                
+                                    <div class="modal__body"><p>
+        Your answer seems a little short (it has less than 10 words).
+        Are you sure you want to submit your answer?
+    </p></div>
+                
+                                    <div class="modal__footer"><button value="CONFIRM_ACTION" class="button button--primary">
+            Yes, submit my answer
+        </button>
+        <button value="" class="button button--ghost">
+            No, do not submit my answer
+        </button></div>
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="progress70">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">You scored over 70% — keep learning!</h2>
+                
+                                    <div class="modal__body"><p>
+        Congratulations! You’ve scored at least 70% of the course points,
+        which means you can now generate your Course Certificate by clicking the “Get certificate” button below your score progress bar.
+    </p>
+
+    <p>
+        We highly encourage you to continue learning to maximise your knowledge,
+        as well as your score in this course. You can earn the <strong>"Top 10% Course Taker"</strong>
+        distinction if you manage to score 90% of course points,
+        and the prestigious <strong>“Best in Class”</strong> distinction if you score 100% of course points!
+    </p></div>
+                
+                                    <div class="modal__footer"><button class="button button--primary">
+            OK, got it
+        </button></div>
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="course-faq">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">Course FAQ</h2>
+                
+                                    <div class="modal__body"><section id="courseintro">
+    
+    <accordion-list role="list">
+    <details class="accordionList__item overflow-hidden" role="listitem">
+    <summary class="summary--noStyle">
+        <div class="accordionItem__titleContent">
+            <div class="accordionItem__title UITypeStyle m-none">
+                How much will I have to <b>pay for the courses</b>?
+            </div>
+            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon accordionItem__chevron"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+        </div>
+    </summary>
+    <div class="accordionItem__content js-accordionItem__content ">
+        <div class="rteContent rteContent--bodyLineHeight rteContent--imageFit">
+        <p>After you pay for your membership, you can take as many courses as you want with <strong>no additional costs</strong>. There are <strong>no further charges</strong> on top of the membership fee.</p><p><a href="/join" class="button large">Start Learning</a></p>
+    </div>
+    </div>
+</details>
+                                                <details class="accordionList__item overflow-hidden" role="listitem">
+    <summary class="summary--noStyle">
+        <div class="accordionItem__titleContent">
+            <div class="accordionItem__title UITypeStyle m-none">
+                <div>Can I take <strong>more than one course</strong> at a time?</div>
+            </div>
+            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon accordionItem__chevron"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+        </div>
+    </summary>
+    <div class="accordionItem__content js-accordionItem__content ">
+        <div class="rteContent rteContent--bodyLineHeight rteContent--imageFit">
+        <div>With a <strong>Professional membership</strong> you can take as many courses as you would like, with no further charges. For example, if there are 30 active courses, you can enroll in all 30 courses at the same time and move from one to another as you prefer.<br></div><div><br>With a <strong>Student membership</strong>, you can take a maximum of two courses at the same time. You can still take as many courses as you would like – free of extra charges – just as long as you finish or drop them so that you don’t have more than two ongoing courses.&nbsp;<br></em><br></div><div><a href="/join">Start Learning</a></div>
+    </div>
+    </div>
+</details>
+                                                <details class="accordionList__item overflow-hidden" role="listitem">
+    <summary class="summary--noStyle">
+        <div class="accordionItem__titleContent">
+            <div class="accordionItem__title UITypeStyle m-none">
+                <div>Can I get <strong>my manager to pay</strong> for my membership?</div>
+            </div>
+            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon accordionItem__chevron"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+        </div>
+    </summary>
+    <div class="accordionItem__content js-accordionItem__content ">
+        <div class="rteContent rteContent--bodyLineHeight rteContent--imageFit">
+        <div>Yes! All you have to do is:&nbsp;</div>
+<ol>
+<li>Get <strong>approval from your manager </strong>(e.g., using the email template below).</li>
+<li><a href="/join">Pay with your credit card</a> (either your own or your corporate credit card).</li>
+<li>Your <strong>invoice will be ready</strong> <strong>instantly </strong>&mdash; and we can modify it to meet your manager's requirements.</li>
+<li>Our 14-day money-back guarantee protects you and your manager.</li>
+</ol>
+<div><strong>Example email for your manager<br /></strong></div>
+<div>Dear manager,&nbsp;</div>
+<div><br />I would like to get reimbursement for my Interaction Design Foundation membership. This membership can benefit our team and company in the following ways:</div>
+<ol>
+<li>I can enroll in all the IxDF&rsquo;s self-paced, online courses (in my spare time), which will help me complete current projects with better results.</li>
+<li>I can network with peers from all over the world and find out how others have addressed issues we are currently facing.</li>
+<li>I will be able to continuously educate myself on UX topics through the IxDF's courses and eBooks.&nbsp;</li>
+<li>Because of the breadth of educational materials, I will learn how to solve specific design problems.</li>
+<li>I want to offer to share the key takeaways from the courses with my team.</li>
+</ol>
+<div>PS: To give you some background, the Interaction Design Foundation is an educational foundation comprising the world&rsquo;s design and UX elite, and you can read more about the foundation at <a href="#">#</a></div>
+<div><a href="/join">Start Learning</a></div>
+    </div>
+    </div>
+</details>
+                                                <details class="accordionList__item overflow-hidden" role="listitem">
+    <summary class="summary--noStyle">
+        <div class="accordionItem__titleContent">
+            <div class="accordionItem__title UITypeStyle m-none">
+                I missed the enrollment, and now the <strong>course is closed</strong>. What can I do?
+            </div>
+            <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon accordionItem__chevron"
+>
+    <use xlink:href="#chevron-down"></use>
+</svg>
+        </div>
+    </summary>
+    <div class="accordionItem__content js-accordionItem__content ">
+        <div class="rteContent rteContent--bodyLineHeight rteContent--imageFit">
+        <p>Don't worry if you <strong>missed the course</strong>. We will re-run it shortly. One of the reasons we continually open and close courses is in order to control the classroom size. </p><p><strong>Networking</strong> is a large part of our value proposition, so we want <i>just</i> the right number of people inside the courses. That is also why we display the "XX % percent booked" on our course icons.</p><p>
+    </div>
+    </div>
+</details>
+</accordion-list>
+
+    </section></div>
+                
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="reportErrorDialog">
+            <form method="dialog" action="/contact/messages" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">Report an error</h2>
+                
+                                    <div class="modal__body"><input type="hidden" name="company" value="">
+    <input type="hidden" name="email" value="pg@fju.us">
+    <input type="hidden" name="name" value="Praveen Garimella">
+
+    <p>
+        We will investigate the error as soon as we can. Thanks for improving our platform!
+    </p>
+
+    <div class="form__field ">
+    
+        <label for="reportAnErrorContactForm__message">Message</label>
+        <textarea name="message" cols="30" rows="6" class="u-no-resize" id="reportAnErrorContactForm__message" required minlength="140"></textarea>
+                    <small class="error">Message is a required field.</small>
+            </div></div>
+                
+                                    <div class="modal__footer"><button type="submit" class="button button--primary">
+            Send us your error report
+        </button></div>
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="verifyPasswordDialog">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">Please Re-enter Your Password For Your Security</h2>
+                
+                                    <div class="modal__body"><p>
+        Please confirm your password before continuing.
+        We won’t ask for your password again for a few hours.
+    </p>
+
+    <input type="hidden" name="requestId" value="1654839345">
+    <input type="text" class="visually-hidden" value="pg@fju.us" autocomplete="username email">
+
+    <div class="form__field mb-small">
+    
+            <label for="field_password">Password</label>
+        <div class="form_passwordInput ">
+            <input  autocomplete="current-password" id="field_password" type="password" name="password" required></input>
+            <button type="button" class="form_passwordInputButton text-sans-serif js_form_passwordInputButton">Show</button>
+
+            
+                            <span class="error">Enter correct password</span>
+                    </div>
+
+        
+            </div>
+
+    <a href="/members/password/reset" class="link text-sans-serif">
+        Forgot Your Password?
+    </a></div>
+                
+                                    <div class="modal__footer"><button type="submit" class="button button--primary modal-success">
+            Confirm Password
+        </button>
+        <button type="reset" class="button button--ghost">
+            Cancel
+        </button></div>
+                            </form>
+        </dialog>
+            <dialog data-cancelable="true" id="freeEbookDialog">
+            <form method="dialog" action="" >
+                                    <button type="reset" aria-label="Close dialog" class="modal__buttonClose">
+                        <svg
+    version="1.1" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    
+    class="svg-icon" width="100%" height="100%" aria-hidden="true"
+>
+    <use xlink:href="#x"></use>
+</svg>
+                    </button>
+                
+                                    <h2 class="modal__title js-dialogTitle">New to UX Design? We’re Giving You a Free ebook!</h2>
+                
+                                    <div class="modal__body"><div class="row">
+    <div class="col-md-4 sm:center">
+
+        <img class="roadblock__productImage"
+             alt="The Basics of User Experience Design"
+             data-src="#">
+    </div>
+
+    <div class="col-md-8">
+
+        <p>
+            Download our free ebook <i>The Basics of User Experience Design</i>
+            to learn about core concepts of UX design.
+        </p>
+        <p>
+            In 9 chapters, we’ll cover: conducting user interviews,
+            design thinking, interaction design, mobile UX design,
+            usability, UX research, and many more!
+        </p>
+
+        <div class="form__field">
+            <input type="hidden" name="mailing_listID" value="48">
+            <div class="inputGroup">
+                <input
+                       name="email"
+                       type="email"
+                       placeholder="Your email"
+                       required
+                       maxlength="100"
+                       autofocus
+                       autocomplete="email">
+                <div class="inputGroup__addon">
+                    <button type="submit" class="button button--primary" formmethod="POST" formaction="/newsletter/subscribe-for-ebook">
+                        <span class="sm:hide">Download free ebook</span>
+                        <span class="sm:show">Go</span>
+                    </button>
+                </div>
+            </div>
+            <small class="error">A valid email address is required.</small>
+        </div>
+        <div class="mt-small">
+            <input type="hidden" name="subscribe_newsletter" value="0">
+<div class="checkboxWithHint">
+    <input type="checkbox" class="checkboxWithHint__checkbox" name="subscribe_newsletter" value="1" id="bjdlKXwR14k0jYaj"
+    checked
+    />
+    <label for="bjdlKXwR14k0jYaj">Get free UX design learning material every week</label>
+    <div class="arrowPointingMessage checkboxWithHint__message">
+        
+        <img class="p-none image image--tiny" src="#" loading="lazy" alt="">
+        <div class="arrowPointingMessage__message">
+            <i class="text-serif">
+            <strong>296,504 designers</strong>
+            enjoy our newsletter—sure you don’t want to receive it?
+        </i>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div></div>
+                
+                            </form>
+        </dialog>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2Cfetch%2CArray.prototype.find%2CArray.prototype.includes%2CArray.prototype.findIndex" nomodule defer crossorigin="anonymous"></script>
+<script src="https://assets.interaction-design.org/js/runtime.js?id=4728b4cdff3e211f29e53c4761bd0732" defer></script>
+<script src="https://assets.interaction-design.org/js/app.js?id=ee994f32b672111232c53ec7dd7ecb0a" defer></script>
+
+    <script src="https://assets.interaction-design.org/js/pages/courses/__ranksProgress.js?id=7b7a77a84ea4dbb294f1446548d06257" defer></script>
+    <script src="https://assets.interaction-design.org/js/pages/courses/courseLessonItem__lessonNavigator.js?id=9bf71fcbf09eae516692fb77006815b4" defer></script>
+    <script src="https://assets.interaction-design.org/js/pages/courses/courseLessonItem__quizzes.js?id=85b3f16c23a09f68cd21d3a8baa4c1d6" defer></script>
+        <script src="https://assets.interaction-design.org/js/components/accordionList.js?id=78ff9f6b2e0895e88c24ec8d60fde35e" defer></script>
+        <script src="https://assets.interaction-design.org/js/components/floatingHelpToolbar.js?id=581882b20c3c5b24beab85071194c25a" defer></script>
+    <script src="https://assets.interaction-design.org/js/pages/courses/courseLessonItem.js?id=c591c01c08e0c630c96068479dba3688" defer></script>
+</body>
+</html>
